@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Special Date Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Step 1: The Invitation -->
+        <div class="card active" id="step-1">
+            <div class="icon">❤️</div>
+            <h1>Will you go on a date with me?</h1>
+            <p>Please say yes, I promise it'll be amazing!</p>
+            <div class="btn-group">
+                <button class="btn btn-yes" onclick="nextStep(2)">Yes! 😍</button>
+                <button class="btn btn-no" id="moving-no-btn">No 😢</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Food Preference -->
+        <div class="card" id="step-2">
+            <h1>What are we eating? 🍝</h1>
+            <p>Pick your absolute favorite cuisine:</p>
+            <div class="options-grid">
+                <button class="option-card" onclick="selectOption('food', 'Italian')">🇮🇹 Italian</button>
+                <button class="option-card" onclick="selectOption('food', 'Sushi')">🇯🇵 Sushi</button>
+                <button class="option-card" onclick="selectOption('food', 'Steakhouse')">🥩 Steakhouse</button>
+                <button class="option-card" onclick="selectOption('food', 'Dessert & Café')">🍰 Sweet Treats</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Activity Selection -->
+        <div class="card" id="step-3">
+            <h1>What's the vibe? 🎡</h1>
+            <p>Choose our main adventure for the day:</p>
+            <div class="options-grid">
+                <button class="option-card" onclick="selectOption('activity', 'Amusement Park')">🎡 Theme Park</button>
+                <button class="option-card" onclick="selectOption('activity', 'Museum & Art Gallery')">🎨 Museum Walk</button>
+                <button class="option-card" onclick="selectOption('activity', 'Cozy Movie Night')">🍿 Movie Night</button>
+                <button class="option-card" onclick="selectOption('activity', 'Scenic Picnic')">🧺 Romantic Picnic</button>
+            </div>
+        </div>
+
+        <!-- Step 4: Summary Screen -->
+        <div class="card" id="step-4">
+            <div class="icon">✨</div>
+            <h1>It's a Date!</h1>
+            <p>Our perfect plan is locked in:</p>
+            <div class="summary-box">
+                <p><strong>Food:</strong> <span id="summary-food">...</span></p>
+                <p><strong>Activity:</strong> <span id="summary-activity">...</span></p>
+            </div>
+            <p class="final-note">Can't wait to see you! I will handle the reservations. 💕</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
